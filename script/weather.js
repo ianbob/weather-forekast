@@ -40,7 +40,58 @@ function formatDate() {
           </div>`;
       }
     });
-  
+  // Function to get the 5-day forecast
+function getForecast(city) {
+  const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+  const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+
+  axios.get(forecastUrl)
+    .then(response => {
+      const forecastData = response.data.list;
+      displayFiveDayForecast(forecastData);
+    })
+    .catch(error => {
+      console.error("Error fetching the forecast data:", error);
+    });
+}
+
+// Function to display the 5-day forecast
+function displayFiveDayForecast(forecastData) {
+  const forecastElement = document.getElementById('weather-forecast');
+  forecastElement.innerHTML = ''; // Clear any previous forecast
+
+  // Loop through the forecast data, getting one forecast per day (8 intervals = 1 day)
+  for (let i = 0; i < forecastData.length; i += 8) {
+    const dayData = forecastData[i];
+    const date = new Date(dayData.dt_txt).toLocaleDateString('en-US', {
+      weekday: 'long',
+      month: 'short',
+      day: 'numeric',
+    });
+
+    const iconUrl = `https://openweathermap.org/img/wn/${dayData.weather[0].icon}@2x.png`;
+    const temp = Math.round(dayData.main.temp);
+    const description = dayData.weather[0].description;
+
+    // Add a new forecast card
+    forecastElement.innerHTML += `
+      <div class="forecast-day">
+        <div>${date}</div>
+        <img src="${iconUrl}" alt="Weather Icon">
+        <div>${temp}°C</div>
+        <div>${description}</div>
+      </div>
+    `;
+  }
+}
+
+// Call the function when submitting a city search
+document.getElementById('search-form').addEventListener('submit', function (event) {
+  event.preventDefault();
+  const city = document.getElementById('search').value;
+  getForecast(city); // Fetch and display the forecast
+});
+
     forecastHTML += `</div>`;
     document.querySelector("#weather-forecast").innerHTML = forecastHTML;
   }
