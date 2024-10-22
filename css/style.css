@@ -59,7 +59,8 @@ body {
   width: 70%;
 }
 
-.search-btn, .current-weather-btn {
+.search-btn,
+.current-weather-btn {
   margin-left: 10px;
 }
 
@@ -144,21 +145,35 @@ body {
   text-decoration: none;
 }
 
+/* Loading Message */
+#loading {
+  text-align: center;
+  font-size: 18px;
+  color: #007bff; /* Bootstrap primary color */
+  margin-top: 20px;
+}
+
+/* Error Message */
+#error-message {
+  margin-top: 20px;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .temp {
-      font-size: 36px;
+    font-size: 36px;
   }
 
   .temp-value-main {
-      font-size: 36px;
+    font-size: 36px;
   }
 
   .degrees {
-      font-size: 18px;
+    font-size: 18px;
   }
 
-  .heading-one, .heading-two {
-      font-size: 18px;
+  .heading-one,
+  .heading-two {
+    font-size: 18px;
   }
 }

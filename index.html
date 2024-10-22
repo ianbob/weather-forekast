@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="background-container">
-        <img src="photos/weather.jpg" alt="flowerman">
+        <img src="photos/weather.jpg" alt="Weather Background" aria-hidden="true">
         <div class="background"></div>
     </div>
 
@@ -20,15 +20,15 @@
             <div class="col-4 section-one">
                 <div class="form">
                     <form id="search-form" class="search-bar">
-                        <input type="search" placeholder="Enter a city" id="search" required autofocus="on" autocomplete="off" class="form-control"/>
+                        <input type="search" placeholder="Enter a city" id="search" required autofocus="on" autocomplete="off" class="form-control" aria-label="City search"/>
                         <input type="submit" value="Search" class="btn btn-primary search-btn"/>
-                        <button type="button" class="btn btn-secondary current-weather-btn" id="current-weather-btn">Current</button>
+                        <button type="button" class="btn btn-secondary current-weather-btn" id="current-weather-btn" aria-label="Get current location weather">Current</button>
                     </form>
                 </div>
 
                 <div class="current-day">Today</div>
                 <div class="temp">
-                    <img src="photos/flowerman.jpg" alt="" class="icon" id="icon">
+                    <img src="photos/flowerman.jpg" alt="Weather Icon" class="icon" id="icon" aria-hidden="true">
                     <span class="temp-value-main" id="temp-main"></span>
                     <small class="degrees" id="degree-fahrenheit">
                         <a href="#" style="text-decoration: none;" id="celsius" class="active celsius">&deg;C</a>  
@@ -90,6 +90,8 @@
                 </div>
 
                 <div class="weather-forecast" id="weather-forecast"></div>
+                <div id="loading" class="d-none">Loading...</div>
+                <div id="error-message" class="alert alert-danger d-none" role="alert"></div>
             </div>
         </div>
 
