@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.background-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  padding: 20px;
+}
+
+/* Heading Styles */
+.heading-one {
+  font-size: 24px;
+  color: #fff;
+}
+
+.heading-two {
+  font-size: 36px;
+  color: #fff;
+}
+
+/* Form Styles */
+.form {
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input[type="search"] {
+  width: 70%;
+}
+
+.search-btn, .current-weather-btn {
+  margin-left: 10px;
+}
+
+/* Weather Data Styles */
+.weather-data {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.icon {
+  width: 80px; /* Adjust size as needed */
+}
+
+.temp {
+  font-size: 48px;
+  margin-top: 10px;
+}
+
+.temp-value-main {
+  font-weight: 700;
+}
+
+.degrees {
+  font-size: 24px;
+}
+
+.weather-info {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.wrapper {
+  margin-top: 20px;
+}
+
+/* National Weather Styles */
+.section-two {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.details-link {
+  margin-top: 20px;
+}
+
+/* Footer Link */
+.link {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.link a {
+  color: #3009dd;
+  text-decoration: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .temp {
+      font-size: 36px;
+  }
+
+  .temp-value-main {
+      font-size: 36px;
+  }
+
+  .degrees {
+      font-size: 18px;
+  }
+
+  .heading-one, .heading-two {
+      font-size: 18px;
+  }
+}
