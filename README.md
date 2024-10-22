@@ -3,10 +3,19 @@
 **Weather Forekast** is a simple app that provides real-time weather updates for any location using the OpenWeather API.
 
 ## Features
-- Search for weather by city
-- Current weather, temperature, humidity, wind speed, and pressure
-- Switch between Celsius and Fahrenheit
-- Responsive design with Bootstrap
+- Displays weather, humidity, wind speed, and atmospheric pressure
+- Switch between Celsius and Fahrenheit units
+- View current weather conditions and description(if geolocation is enabled in your browser)
+- Displays date and time for the selected location
+- Responsive design using Bootstrap
+
+## Technologies Used
+
+- **HTML5**
+- **CSS3** (with Bootstrap for responsiveness)
+- **JavaScript (ES6+)**
+- **Axios** (for API calls)
+- **OpenWeather API** (to fetch weather data)
 
 ## How to Run Locally
 1. Clone the repo: `git clone https://github.com/ianbob/weather-forekast.git`
