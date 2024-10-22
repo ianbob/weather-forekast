@@ -40,9 +40,10 @@ function formatDate() {
           </div>`;
       }
     });
-  // Function to get the 5-day forecast
+      
+// Function to get the 5-day forecast
 function getForecast(city) {
-  const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+  const apiKey = '206048a161a48264555254d853eb3669'; // 
   const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
   axios.get(forecastUrl)
