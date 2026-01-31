@@ -1,4 +1,4 @@
-# Weather Forekast 🌤️
+# Weather Forekast 
 
 **Weather Forekast** is a simple app that provides real-time weather updates for any location using the OpenWeather API.
 
@@ -28,7 +28,7 @@
 
    ```javascript
    const apiKey = 'YOUR_API_KEY_HERE';
-**License**
+
 Licensed under the MIT License.
 
 Contributions are welcome!
